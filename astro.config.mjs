@@ -7,6 +7,7 @@ import pagefind from "astro-pagefind";
 export default defineConfig({
   site: "https://founders-field-guide.vercel.app",
   output: "static",
+  markdown: { syntaxHighlight: false },
   trailingSlash: "always",
   build: { format: "directory", inlineStylesheets: "never" },
   integrations: [
