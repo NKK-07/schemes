@@ -1,6 +1,6 @@
 $ rm -rf node_modules dist && npm ci --no-audit --no-fund 2>&1 | grep -v 'npm warn deprecated'
 
-added 864 packages in 14s
+added 864 packages in 19s
 exit=0
 $ ls node_modules/@pagefind
 component-ui

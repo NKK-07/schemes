@@ -1,12 +1,12 @@
 $ rm -rf node_modules dist && npm ci --ignore-scripts --no-audit --no-fund 2>&1 | grep -v 'npm warn deprecated'
 
-added 864 packages in 15s
+added 864 packages in 11s
 exit=0
 $ npx astro build 2>&1 | grep -E 'pagefind\]|Complete|ERROR'
-16:21:43 [build] ✓ Completed in 177ms.
-16:21:44 ✓ Completed in 344ms.
-16:21:44 [build] ✓ Completed in 789ms.
-16:21:44 [pagefind] Pagefind indexed 5 pages
-16:21:44 [pagefind] Pagefind wrote index to /home/claude/ffg-spike/dist/pagefind
-16:21:44 [build] Complete!
+20:54:00 [build] ✓ Completed in 177ms.
+20:54:01 ✓ Completed in 716ms.
+20:54:01 [build] ✓ Completed in 1.10s.
+20:54:01 [pagefind] Pagefind indexed 5 pages
+20:54:01 [pagefind] Pagefind wrote index to /home/claude/ffg-spike/dist/pagefind
+20:54:01 [build] Complete!
 exit=0

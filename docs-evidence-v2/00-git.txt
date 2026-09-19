@@ -1,6 +1,39 @@
 $ git rev-parse HEAD && git status --short && node -v && npm -v
-d890776d3f64c911bfab35bc6444eb7f027bba73
-?? docs-evidence-v2/
+c5920c96f31752b6f8b4f5798ef832df90867585
+ M docs-evidence-v2/00-git.txt
+ D docs-evidence-v2/01-npm-ci.txt
+ D docs-evidence-v2/02-versions.txt
+ D docs-evidence-v2/03-engines.txt
+ D docs-evidence-v2/03b-npm-view.txt
+ D docs-evidence-v2/03c-peer-check.txt
+ D docs-evidence-v2/03d-data-sanity.txt
+ D docs-evidence-v2/04-build-security21.txt
+ D docs-evidence-v2/05-csp-security21.txt
+ D docs-evidence-v2/06-browser-security21.txt
+ D docs-evidence-v2/07-build-committed.txt
+ D docs-evidence-v2/08-csp-committed.txt
+ D docs-evidence-v2/09-browser-committed.txt
+ D docs-evidence-v2/10-pagefind-main-thread-with-wasm.txt
+ D docs-evidence-v2/11-webkit-check-in-chromium.txt
+ D docs-evidence-v2/12-sitemap.txt
+ D docs-evidence-v2/13-og-default-families.png
+ D docs-evidence-v2/13-og-png.txt
+ D docs-evidence-v2/14-a10.txt
+ D docs-evidence-v2/15-favicon-probe.txt
+ D docs-evidence-v2/16-build-nowasm.txt
+ D docs-evidence-v2/17-pagefind-without-wasm.txt
+ D docs-evidence-v2/18-mutation-listen-false.txt
+ D docs-evidence-v2/19-og-exact-mono.png
+ D docs-evidence-v2/19-og-families.txt
+ D docs-evidence-v2/19-og-wrong-mono.png
+ D docs-evidence-v2/20-ignore-scripts.txt
+ D docs-evidence-v2/21-npm-audit.txt
+ D docs-evidence-v2/22-fresh-install.txt
+ D docs-evidence-v2/23-og-proposal-0004.txt
+ D docs-evidence-v2/23-og-proposal-cgss.png
+ D docs-evidence-v2/23-og-proposal-long.png
+ D docs-evidence-v2/23-og-proposal-region.png
+ D docs-evidence-v2/99-git-after.txt
 v22.23.2
 10.9.7
 exit=0
