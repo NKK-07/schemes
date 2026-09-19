@@ -1,8 +1,8 @@
 $ sed -i 's/listen: true,/listen: false,/' src/stores/shortlist.ts && npx astro build 2>&1 | grep -E 'Complete|ERROR'
-16:21:12 [build] ✓ Completed in 93ms.
-16:21:13 ✓ Completed in 247ms.
-16:21:13 [build] ✓ Completed in 692ms.
-16:21:13 [build] Complete!
+20:53:33 [build] ✓ Completed in 85ms.
+20:53:34 ✓ Completed in 308ms.
+20:53:34 [build] ✓ Completed in 756ms.
+20:53:34 [build] Complete!
 exit=0
 $ BROWSERS=chromium CHROMIUM_PATH=/opt/pw-browsers/chromium node webkit-check.mjs
 {"browser":"chromium","version":"141.0.7390.37","page1Changed":true,"crossTabSynced":false,"ms":null,"before2":"Saved: 0","after2":"Saved: 0","cspViolations":[]}

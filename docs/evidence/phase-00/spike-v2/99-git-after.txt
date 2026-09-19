@@ -1,3 +1,23 @@
 $ git status --short
-?? docs-evidence-v2/
+ M docs-evidence-v2/00-git.txt
+ M docs-evidence-v2/01-npm-ci.txt
+ M docs-evidence-v2/04-build-security21.txt
+ M docs-evidence-v2/06-browser-security21.txt
+ M docs-evidence-v2/07-build-committed.txt
+ M docs-evidence-v2/09-browser-committed.txt
+ M docs-evidence-v2/16-build-nowasm.txt
+ M docs-evidence-v2/18-mutation-listen-false.txt
+ M docs-evidence-v2/19-og-families.txt
+ M docs-evidence-v2/20-ignore-scripts.txt
+ M docs-evidence-v2/23-og-proposal-0004.txt
+ M docs-evidence-v2/23-og-proposal-long.png
+ D docs-evidence-v2/23-og-proposal-region.png
+ M docs-evidence-v2/99-git-after.txt
+?? docs-evidence-v2/00-environment.txt
+?? docs-evidence-v2/23-og-proposal-DH.png
+?? docs-evidence-v2/23-og-proposal-KL.png
+?? docs-evidence-v2/23-og-proposal-RJ.png
+?? docs-evidence-v2/23-og-proposal-iic.png
+?? docs-evidence-v2/23-og-proposal-longer.png
+?? docs-evidence-v2/23-og-proposal-sipp.png
 exit=0

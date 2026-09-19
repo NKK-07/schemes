@@ -1,0 +1,36 @@
+$ cat .phase
+00
+exit=0
+$ git status --short | head -5 && git status --short | wc -l
+D  docs/evidence/phase-00/spike-v2/00-git.txt
+D  docs/evidence/phase-00/spike-v2/01-npm-ci.txt
+D  docs/evidence/phase-00/spike-v2/02-versions.txt
+D  docs/evidence/phase-00/spike-v2/03-engines.txt
+D  docs/evidence/phase-00/spike-v2/03b-npm-view.txt
+37
+exit=0
+$ git log --oneline -5
+61abbe1 phase-00: name the revision-2 commit in the audit responses (AGENTS §10)
+9189480 phase-00: revision 2 after audit 1 (A00-1-002…016), proposal 0004 (PHASES Phase 0, AGENTS §10)
+b2c3ae4 phase-00: report, evidence and proposals 0001–0003 (PHASES Phase 0)
+4db6da8 phase-00: registry, peer-range and data sanity evidence (PHASES Phase 0 tasks 3 and 5)
+e382955 phase-00: set .phase and record the environment (PHASES Phase 0 task 2)
+exit=0
+$ node -v
+v22.23.2
+exit=0
+$ npm -v
+10.9.7
+exit=0
+$ git -C /home/claude/ffg-spike log --oneline -1
+49e58d3 spike: Phase 0 evidence v2, run 2 (one run of phase0-evidence.sh at c5920c9)
+exit=0
+$ git --version
+git version 2.43.0
+exit=0
+$ ls /opt/pw-browsers
+chromium
+chromium-1194
+chromium_headless_shell-1194
+ffmpeg-1011
+exit=0

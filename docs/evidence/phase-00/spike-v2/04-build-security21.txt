@@ -1,32 +1,40 @@
 $ npx astro build --config astro.config.security21.mjs 2>&1 | grep -vE '^\s*$'
-16:20:35 [WARN] [config] Shiki syntax highlighting uses inline styles that are not compatible with Content Security Policy (CSP). Consider using Prism syntax highlighting instead, or disable CSP if Shiki is required.
-16:20:35 [types] Generated 148ms
-16:20:35 [build] output: "static"
-16:20:35 [build] mode: "static"
-16:20:35 [build] directory: /home/claude/ffg-spike/dist/
-16:20:35 [build] Collecting build info...
-16:20:35 [build] ✓ Completed in 201ms.
-16:20:35 [build] Building static entrypoints...
-16:20:36 [vite] ✓ built in 357ms
-16:20:36 [vite] ✓ built in 64ms
-16:20:36 [build] Rearranging server assets...
+20:52:55 [WARN] [config] Shiki syntax highlighting uses inline styles that are not compatible with Content Security Policy (CSP). Consider using Prism syntax highlighting instead, or disable CSP if Shiki is required.
+20:52:55 [types] Generated 139ms
+20:52:55 [build] output: "static"
+20:52:55 [build] mode: "static"
+20:52:55 [build] directory: /home/claude/ffg-spike/dist/
+20:52:55 [build] Collecting build info...
+20:52:55 [build] ✓ Completed in 185ms.
+20:52:55 [build] Building static entrypoints...
+20:52:56 [vite] ✓ built in 326ms
+20:52:56 [vite] ✓ built in 56ms
+20:52:56 [build] Rearranging server assets...
  generating static routes 
-16:20:36   ├─ /404.html (+10ms) 
-16:20:36   ├─ /noworker/index.html (+4ms) 
-16:20:36   ├─ /og/schemes/cgss.png/[astro-og-canvas] Loading ./reference/fonts/newsreader-500.v1.woff2
+20:52:56   ├─ /404.html (+8ms) 
+20:52:56   ├─ /noworker/index.html (+4ms) 
+20:52:56   ├─ /og/schemes/cgss.png/[astro-og-canvas] Loading ./reference/fonts/newsreader-500.v1.woff2
 [astro-og-canvas] Loading ./reference/fonts/plexsans-400.v1.woff2
 [astro-og-canvas] Loading ./reference/fonts/plexmono-500.v1.woff2
 [astro-og-canvas] Loaded 3 font families:
 Newsreader Medium, IBM Plex Sans, IBM Plex Mono Medium
- (+293ms) 
-16:20:36   ├─ /second/index.html (+11ms) 
-16:20:36   ├─ /shortlist/index.html (+4ms) 
-16:20:36   ├─ /index.html (+5ms) 
-16:20:36 ✓ Completed in 347ms.
-16:20:36 [build] ✓ Completed in 811ms.
-16:20:36 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
-16:20:36 [pagefind] Pagefind indexed 5 pages
-16:20:36 [pagefind] Pagefind wrote index to /home/claude/ffg-spike/dist/pagefind
-16:20:36 [build] 5 page(s) built in 1.05s
-16:20:36 [build] Complete!
+ (+287ms) 
+20:52:56   ├─ /og-proposal/schemes/cgss.png/ (+49ms) 
+20:52:56   ├─ /og-proposal/schemes/long.png/ (+44ms) 
+20:52:56   ├─ /og-proposal/schemes/longer.png/ (+43ms) 
+20:52:56   ├─ /og-proposal/regions/KL.png/ (+41ms) 
+20:52:56   ├─ /og-proposal/schemes/sipp.png/ (+43ms) 
+20:52:56   ├─ /og-proposal/schemes/iic.png/ (+42ms) 
+20:52:56   ├─ /og-proposal/regions/RJ.png/ (+41ms) 
+20:52:56   ├─ /og-proposal/regions/DH.png/ (+41ms) 
+20:52:56   ├─ /second/index.html (+9ms) 
+20:52:56   ├─ /shortlist/index.html (+2ms) 
+20:52:56   ├─ /index.html (+4ms) 
+20:52:56 ✓ Completed in 677ms.
+20:52:56 [build] ✓ Completed in 1.10s.
+20:52:56 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+20:52:56 [pagefind] Pagefind indexed 5 pages
+20:52:56 [pagefind] Pagefind wrote index to /home/claude/ffg-spike/dist/pagefind
+20:52:56 [build] 5 page(s) built in 1.31s
+20:52:56 [build] Complete!
 exit=0

@@ -1,0 +1,11 @@
+$ cat /home/claude/ffg-env.sh && which node && node -v && npm -v && uname -m && grep PRETTY_NAME /etc/os-release && /opt/pw-browsers/chromium --version
+export PATH=/home/claude/node22/package/bin:$PATH
+export PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers
+export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+/home/claude/node22/package/bin/node
+v22.23.2
+10.9.7
+x86_64
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+Chromium 141.0.7390.37 
+exit=0

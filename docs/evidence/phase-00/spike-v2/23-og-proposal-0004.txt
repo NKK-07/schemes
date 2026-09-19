@@ -1,11 +1,47 @@
-$ npx astro build (spike with src/pages/og-proposal, the proposal 0004 layout)
-16:24:30 [build] ✓ Completed in 92ms.
-[astro-og-canvas] Loaded 3 font families:
-Newsreader Medium, IBM Plex Sans, IBM Plex Mono Medium
-16:24:30   ├─ /og-proposal/schemes/cgss.png/ (+112ms) 
-16:24:30   ├─ /og-proposal/schemes/long.png/ (+57ms) 
-16:24:30   ├─ /og-proposal/regions/KL.png/ (+46ms) 
-16:24:30 ✓ Completed in 467ms.
-16:24:30 [build] ✓ Completed in 934ms.
-16:24:30 [build] Complete!
+$ grep -F 'og-proposal' docs-evidence-v2/07-build-committed.txt
+20:53:06   ├─ /og-proposal/schemes/cgss.png/ (+3ms) 
+20:53:06   ├─ /og-proposal/schemes/long.png/ (+2ms) 
+20:53:06   ├─ /og-proposal/schemes/longer.png/ (+2ms) 
+20:53:06   ├─ /og-proposal/regions/KL.png/ (+2ms) 
+20:53:06   ├─ /og-proposal/schemes/sipp.png/ (+2ms) 
+20:53:06   ├─ /og-proposal/schemes/iic.png/ (+2ms) 
+20:53:06   ├─ /og-proposal/regions/RJ.png/ (+1ms) 
+20:53:06   ├─ /og-proposal/regions/DH.png/ (+1ms) 
+exit=0
+$ python3 -c "import re;src=open('src/pages/og-proposal/[...route].ts',encoding='utf8').read();[print(len(t),'chars ->',52 if len(t)>60 else 64,'px:',t) for t in re.findall(r'title: \"([^\"]+)\"',src)]"
+36 chars -> 64 px: Credit Guarantee Scheme for Startups
+92 chars -> 52 px: A deliberately long test title, not a scheme, to see how the social image wraps at 52 pixels
+122 chars -> 52 px: A deliberately long test title, not a scheme, to see how the social image wraps at 52 pixels when it runs past three lines
+67 chars -> 52 px: Startup Schemes in Kerala (2026): State Grants, Incentives & Policy
+60 chars -> 64 px: Startup IP Protection (SIPP): patent & trademark fee rebates
+73 chars -> 52 px: Institution's Innovation Council & National Innovation and Startup Policy
+70 chars -> 52 px: Startup Schemes in Rajasthan (2026): State Grants, Incentives & Policy
+62 chars -> 52 px: Startup Schemes in Dadra & Nagar Haveli and Daman & Diu (2026)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/schemes/cgss.png','rb').read(32);print('schemes/cgss', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/schemes/cgss.png docs-evidence-v2/23-og-proposal-cgss.png
+schemes/cgss True (1200, 630)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/schemes/long.png','rb').read(32);print('schemes/long', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/schemes/long.png docs-evidence-v2/23-og-proposal-long.png
+schemes/long True (1200, 630)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/schemes/longer.png','rb').read(32);print('schemes/longer', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/schemes/longer.png docs-evidence-v2/23-og-proposal-longer.png
+schemes/longer True (1200, 630)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/regions/KL.png','rb').read(32);print('regions/KL', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/regions/KL.png docs-evidence-v2/23-og-proposal-KL.png
+regions/KL True (1200, 630)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/schemes/sipp.png','rb').read(32);print('schemes/sipp', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/schemes/sipp.png docs-evidence-v2/23-og-proposal-sipp.png
+schemes/sipp True (1200, 630)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/schemes/iic.png','rb').read(32);print('schemes/iic', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/schemes/iic.png docs-evidence-v2/23-og-proposal-iic.png
+schemes/iic True (1200, 630)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/regions/RJ.png','rb').read(32);print('regions/RJ', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/regions/RJ.png docs-evidence-v2/23-og-proposal-RJ.png
+regions/RJ True (1200, 630)
+exit=0
+$ python3 -c "import struct;b=open('dist/og-proposal/regions/DH.png','rb').read(32);print('regions/DH', b[:8]==b'\\x89PNG\\r\\n\\x1a\\n', struct.unpack('>II',b[16:24]))" && cp dist/og-proposal/regions/DH.png docs-evidence-v2/23-og-proposal-DH.png
+regions/DH True (1200, 630)
+exit=0
+$ find dist -iname '*wordmark*' | wc -l
+0
 exit=0

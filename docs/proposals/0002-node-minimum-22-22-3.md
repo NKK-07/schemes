@@ -3,13 +3,13 @@
 | | |
 |---|---|
 | Author | builder |
-| Date | 2026-09-19 (revised after audit 1, finding A00-1-007) |
-| Changes | ARCHITECTURE §2 (Node line); PHASES Phase 0 task 2; PHASES Phase 1 task 1; ACCEPTANCE AC-OPS-03.1 |
+| Date | 2026-09-19 (revised after audit 1, A00-1-007, and audit 2, A00-2-001) |
+| Changes | ARCHITECTURE §2 (Node line); PHASES Phase 0 task 2; PHASES Phase 1 task 1; ACCEPTANCE AC-OPS-03.1; TESTING §4 (the `AC-OPS-03` row of the build-check table) |
 | Triggered by | Phase 0, task 3 (peer and engine ranges) |
 | Status | Open |
 
 ## Problem
-The pack says Node "22.x" (ARCHITECTURE §2, PHASES Phase 1 task 1, AC-OPS-03.1) and "≥ 22.12, < 23" (PHASES Phase 0 task 2). The locked tree needs more.
+The pack says Node "22.x" (ARCHITECTURE §2, PHASES Phase 1 task 1, AC-OPS-03.1, TESTING §4) and "≥ 22.12, < 23" (PHASES Phase 0 task 2). The locked tree needs more.
 
 `docs/evidence/phase-00/spike-v2/03-engines.txt` checks the `engines.node` range of every package in the lockfile:
 
@@ -21,15 +21,16 @@ The direct-package check says the same at the top level: `03c-peer-check.txt` gi
 
 With `engine-strict=true` (SECURITY §6), `npm ci` on Node 22.22.2 stops with `notsup` (the reviewer reproduced this for `astro-eslint-parser@3.1.0`, audit 1 A00-1-007).
 
-The builder's sandbox had Node 22.22.2; it now uses 22.23.2, taken from the npm package `node-linux-x64` because nodejs.org is blocked by the sandbox proxy (`docs/evidence/phase-00/00-environment.txt`).
+The builder's sandbox had Node 22.22.2; it now uses 22.23.2, taken from the npm package `node-linux-x64` because nodejs.org is blocked by the sandbox proxy (`docs/evidence/phase-00/spike-v2/00-environment.txt`).
 
 ## Proposed change
 - ARCHITECTURE §2: "Node **22.x, at least 22.22.3** (`engines.node: ">=22.22.3 <23"`, `.nvmrc: 22`), npm."
 - PHASES Phase 0 task 2: "`node -v` (≥ 22.22.3, < 23)".
 - PHASES Phase 1 task 1: "`engines.node: ">=22.22.3 <23"`".
 - ACCEPTANCE AC-OPS-03.1: "`engines.node` is `>=22.22.3 <23`".
+- TESTING §4, row `AC-OPS-03`: "| `AC-OPS-03` | `engines.node` = `>=22.22.3 <23`, `.nvmrc` = `22`, `verify` script order |".
 
-The Vercel project's Node version setting must be 22.x; the Vercel build log records the exact version used, and the Phase 0 preview check (BLOCKED OWNER-1) records it.
+The Vercel project's Node version setting must be 22.x. The spike's `build` script prints `node -v` first, so the Vercel build log of the spike preview shows the version Vercel used; the owner sends that log (BLOCKED OWNER-1).
 
 ## Options
 | Option | Consequence | Criteria affected |
