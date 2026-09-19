@@ -39,12 +39,14 @@ The site is **static**. It has no accounts, no server-side code, no database and
 
 **The owner fills these in before Phase 0 can exit.** Agents must not choose them.
 
+Recorded on 19 Sep 2026 from the owner's answers in chat.
+
 | ID | Decision | Options | Recommended | **Owner's decision** |
 |---|---|---|---|---|
-| D1 | Visual direction | Editorial (current) · A Civic Ledger · B File Cover · C Launchpad · mix (describe) | Editorial | _fill in_ |
-| D2 | AI crawlers (GPTBot, ClaudeBot, PerplexityBot, etc.) | Allow · Block (robots.txt + Vercel AI Bots ruleset) | Allow | _fill in_ |
-| D3 | GitHub Actions: tests on every push + daily rebuild at 06:00 IST | Yes · No | Yes | _fill in_ |
-| D4 | Vercel Web Analytics (cookie-free) | On · Off | On | _fill in_ |
+| D1 | Visual direction | Editorial (current) · A Civic Ledger · B File Cover · C Launchpad · mix (describe) | Editorial | **Editorial, refined.** The owner wants the Editorial look refined. The refinements are specified by the owner and applied as a DESIGN.md amendment (proposal) approved **before Phase 4 starts** (DESIGN §1). Phases 0–3 do not depend on it. |
+| D2 | AI crawlers (GPTBot, ClaudeBot, PerplexityBot, etc.) | Allow · Block (robots.txt + Vercel AI Bots ruleset) | Allow | **Allow** |
+| D3 | GitHub Actions: tests on every push + daily rebuild at 06:00 IST | Yes · No | Yes | **Yes** |
+| D4 | Vercel Web Analytics (cookie-free) | On · Off | On | **On** |
 
 Consequences are defined in `ARCHITECTURE.md` §9 (D3, D4), `SECURITY.md` §4 (D2) and `DESIGN.md` §1 (D1).
 
