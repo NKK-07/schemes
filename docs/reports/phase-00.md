@@ -177,7 +177,7 @@ Every FIXED item below is in commit `9189480` on `phase/00-recon` (revision 2), 
 
 ### Audit 2 (`docs/audits/phase-00-audit-2.md`: open P0 1, P1 0, P2 6)
 
-Every FIXED item below is in the revision-3 commit named under the table, with fresh evidence from the spike at `c5920c9` (output committed as `49e58d3`).
+Every FIXED item below is in commit `4125665` on `phase/00-recon` (revision 3), with fresh evidence from the spike at `c5920c9` (output committed as `49e58d3`).
 
 | Finding | Sev. | Response |
 |---|---|---|
