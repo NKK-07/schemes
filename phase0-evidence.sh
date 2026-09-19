@@ -12,7 +12,9 @@ run() { # run "<file>" "<command>"
   local f="$OUT/$1"; shift
   echo "\$ $*" >> "$f"
   bash -o pipefail -c "$*" >> "$f" 2>&1
-  echo "exit=$?" >> "$f"
+  local rc=$?
+  [ -n "$(tail -c1 "$f")" ] && echo >> "$f"   # output without a final newline
+  echo "exit=$rc" >> "$f"
 }
 serve() {
   for p in $(ps -eo pid,args | awk '/astro preview --port '"$PORT"'/ && !/awk/ {print $1}'); do kill "$p" 2>/dev/null; done
