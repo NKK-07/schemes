@@ -1,0 +1,7 @@
+$ node noworker-check.mjs
+{
+ "out": "results: /second/",
+ "csp": [],
+ "console": []
+}
+exit=0

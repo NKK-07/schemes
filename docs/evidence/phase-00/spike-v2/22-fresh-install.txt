@@ -1,0 +1,7 @@
+$ ./fresh-install-check.sh
+npm install exit=0
+added 856 packages in 1m
+component-ui
+linux-x64
+lockfile identical to committed
+exit=0

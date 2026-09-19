@@ -1,0 +1,3 @@
+$ git status --short
+?? docs-evidence-v2/
+exit=0

@@ -1,0 +1,10 @@
+$ python3 csp-all-pages.py
+dist/404.html: meta=yes at 411, inline blocks=1, not listed=none
+dist/index.html CSP meta content:
+   default-src 'self';img-src 'self' data:;font-src 'self';connect-src 'self';manifest-src 'self';worker-src 'self';object-src 'none';base-uri 'self';form-action 'self'; script-src 'self' 'wasm-unsafe-eval' 'sha256-D0X/RudTxbWCIEUFjAmwaX2l1yKdJadWf7FFW3+mpZE=' 'sha256-BF0290pkb3jxQsE7z00xR8Imp8X34FLC88L0lkMnrGw=' 'sha256-QzWFZi+FLIx23tnm9SBU4aEgx4x8DsuASP07mfqol/c=' 'sha256-0chmwFk0zaA528yFfGV7J9ppIpdfTPPULncDF3WG7Zs=' 'sha256-eIXWvAmxkr251LJZkjniEK5LcPF3NkapbJepohwYRIc=' 'sha256-Q2BPg90ZMplYY+FSdApNErhpWafg2hcRRbndmvxuL/Q=' 'sha256-Ya0pUYrC7nM5Cn/056TyVuEiz6dFGrzmkWzgON0pF0U=' 'sha256-SHXg3YtOAVshUMT3f+eElYDgbV0kaujWj8DSaXSS4Vs='; style-src 'self' 'sha256-vv9IoKo7BSLbWcUHr3tNmfNVmm5L/9Cfn2H6LMk7/ow=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=';
+dist/index.html: meta=yes at 441, inline blocks=4, not listed=none
+dist/noworker/index.html: meta=yes at 418, inline blocks=1, not listed=none
+dist/second/index.html: meta=yes at 400, inline blocks=4, not listed=none
+dist/shortlist/index.html: meta=yes at 398, inline blocks=1, not listed=none
+TOTAL inline blocks not listed: 0
+exit=0

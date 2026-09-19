@@ -1,0 +1,11 @@
+$ npx astro build (spike with src/pages/og-proposal, the proposal 0004 layout)
+16:24:30 [build] ✓ Completed in 92ms.
+[astro-og-canvas] Loaded 3 font families:
+Newsreader Medium, IBM Plex Sans, IBM Plex Mono Medium
+16:24:30   ├─ /og-proposal/schemes/cgss.png/ (+112ms) 
+16:24:30   ├─ /og-proposal/schemes/long.png/ (+57ms) 
+16:24:30   ├─ /og-proposal/regions/KL.png/ (+46ms) 
+16:24:30 ✓ Completed in 467ms.
+16:24:30 [build] ✓ Completed in 934ms.
+16:24:30 [build] Complete!
+exit=0

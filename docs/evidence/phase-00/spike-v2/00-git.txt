@@ -1,0 +1,6 @@
+$ git rev-parse HEAD && git status --short && node -v && npm -v
+d890776d3f64c911bfab35bc6444eb7f027bba73
+?? docs-evidence-v2/
+v22.23.2
+10.9.7
+exit=0

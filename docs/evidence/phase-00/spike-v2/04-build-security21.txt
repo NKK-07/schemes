@@ -1,0 +1,32 @@
+$ npx astro build --config astro.config.security21.mjs 2>&1 | grep -vE '^\s*$'
+16:20:35 [WARN] [config] Shiki syntax highlighting uses inline styles that are not compatible with Content Security Policy (CSP). Consider using Prism syntax highlighting instead, or disable CSP if Shiki is required.
+16:20:35 [types] Generated 148ms
+16:20:35 [build] output: "static"
+16:20:35 [build] mode: "static"
+16:20:35 [build] directory: /home/claude/ffg-spike/dist/
+16:20:35 [build] Collecting build info...
+16:20:35 [build] ✓ Completed in 201ms.
+16:20:35 [build] Building static entrypoints...
+16:20:36 [vite] ✓ built in 357ms
+16:20:36 [vite] ✓ built in 64ms
+16:20:36 [build] Rearranging server assets...
+ generating static routes 
+16:20:36   ├─ /404.html (+10ms) 
+16:20:36   ├─ /noworker/index.html (+4ms) 
+16:20:36   ├─ /og/schemes/cgss.png/[astro-og-canvas] Loading ./reference/fonts/newsreader-500.v1.woff2
+[astro-og-canvas] Loading ./reference/fonts/plexsans-400.v1.woff2
+[astro-og-canvas] Loading ./reference/fonts/plexmono-500.v1.woff2
+[astro-og-canvas] Loaded 3 font families:
+Newsreader Medium, IBM Plex Sans, IBM Plex Mono Medium
+ (+293ms) 
+16:20:36   ├─ /second/index.html (+11ms) 
+16:20:36   ├─ /shortlist/index.html (+4ms) 
+16:20:36   ├─ /index.html (+5ms) 
+16:20:36 ✓ Completed in 347ms.
+16:20:36 [build] ✓ Completed in 811ms.
+16:20:36 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+16:20:36 [pagefind] Pagefind indexed 5 pages
+16:20:36 [pagefind] Pagefind wrote index to /home/claude/ffg-spike/dist/pagefind
+16:20:36 [build] 5 page(s) built in 1.05s
+16:20:36 [build] Complete!
+exit=0
