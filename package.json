@@ -1,0 +1,49 @@
+{
+  "name": "ffg-spike-phase-00",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "astro build",
+    "preview": "astro preview --port 4321",
+    "test:zod": "vitest run tests/zod.test.ts",
+    "zod:tsx": "tsx zod-tsx.ts",
+    "browser": "node browser-spike.mjs"
+  },
+  "dependencies": {
+    "@astrojs/preact": "6.0.5",
+    "@astrojs/sitemap": "3.7.4",
+    "@lucide/astro": "1.47.0",
+    "@nanostores/persistent": "1.3.5",
+    "@nanostores/preact": "1.1.0",
+    "astro": "7.3.3",
+    "astro-og-canvas": "0.13.2",
+    "astro-pagefind": "2.0.1",
+    "lucide-preact": "1.47.0",
+    "nanostores": "1.5.3",
+    "pagefind": "1.5.2",
+    "preact": "10.29.8",
+    "schema-dts": "2.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@axe-core/playwright": "4.13.0",
+    "@lhci/cli": "0.15.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.20.3",
+    "eslint": "10.10.0",
+    "eslint-plugin-astro": "3.2.1",
+    "html-validate": "11.16.0",
+    "knip": "6.37.0",
+    "linkinator": "8.1.0",
+    "node-html-parser": "9.0.4",
+    "prettier": "3.9.8",
+    "prettier-plugin-astro": "1.0.1",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.0",
+    "vitest": "5.0.1"
+  }
+}

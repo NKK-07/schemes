@@ -1,9 +1,3 @@
 node_modules/
 dist/
 .astro/
-.lighthouseci/
-playwright-report/
-test-results/
-.env
-.env.*
-.DS_Store

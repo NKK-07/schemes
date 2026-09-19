@@ -1,0 +1,27 @@
+---
+import Layout from "../components/Layout.astro";
+import Counter from "../islands/Counter.tsx";
+import { Demo } from "../lib/schema";
+const parsed = Demo.parse({ id: "cgss", n: 1 });
+---
+<Layout title="Spike home — Founder's Field Guide & friends">
+  <article data-pagefind-body data-pagefind-meta={`id:${parsed.id}`}>
+    <h1>Credit Guarantee Scheme for Startups</h1>
+    <p class="stamp">Collateral-free loans up to ₹20 cr for startups in Kerala.</p>
+  </article>
+  <Counter client:idle />
+  <input id="q" type="search" />
+  <ul id="results"></ul>
+  <script>
+    const input = document.getElementById("q") as HTMLInputElement;
+    const out = document.getElementById("results")!;
+    input.addEventListener("input", async () => {
+      const url = "/pagefind/pagefind.js";
+      const pf = await import(/* @vite-ignore */ url);
+      const r = await pf.search(input.value);
+      const data = await Promise.all(r.results.map((x: { data: () => Promise<{ url: string }> }) => x.data()));
+      out.textContent = "";
+      for (const d of data) { const li = document.createElement("li"); li.textContent = d.url; out.append(li); }
+    });
+  </script>
+</Layout>

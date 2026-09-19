@@ -1,0 +1,14 @@
+$ node browser-spike.mjs   (variant build with manual boot-script hash)
+{
+ "htmlHasJsClass": true,
+ "islandCountAfterClick": "Saved: 1",
+ "crossTabMs": 20,
+ "search:kerala": [
+  "/"
+ ],
+ "search:prototype": [
+  "/second/"
+ ],
+ "cspViolations": []
+}
+exit=0

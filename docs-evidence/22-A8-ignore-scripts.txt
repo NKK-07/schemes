@@ -1,0 +1,11 @@
+$ rm -rf node_modules dist && npm ci --ignore-scripts && npm run build
+
+added 864 packages in 15s
+npm ci exit=0
+[astro-og-canvas] Loaded 2 font families:
+15:35:26 [pagefind] Pagefind indexed 3 pages
+15:35:26 [pagefind] Pagefind wrote index to /home/claude/ffg-spike/spike/dist/pagefind
+15:35:26 [build] Complete!
+build exit=0
+dist/og/schemes/cgss.png
+dist/pagefind/pagefind.js

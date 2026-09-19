@@ -1,0 +1,15 @@
+$ npx vitest run tests/zod.test.ts
+ RUN  v5.0.1 /home/claude/ffg-spike/spike
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  15:35:03
+   Duration  243ms (import 62%, transform 29%, tests 5%, worker 4%)
+
+exit=0
+$ npx tsx zod-tsx.ts
+A10 tsx: true false
+exit=0
+$ grep -c "Demo" dist/index.html (Astro page used the schema at build: page rendered with parsed id "cgss")
+data-pagefind-meta="id:cgss"
