@@ -1,0 +1,9 @@
+@astrojs/markdown-remark not installed
+preact-render-to-string installed 6.7.0 peer=false dev=false optional=false
+vite installed 8.3.0 peer=false dev=false optional=false
+playwright-core installed 1.63.0 peer=false dev=true optional=false
+jiti installed 2.7.0 peer=false dev=false optional=false
+@typescript-eslint/parser installed 8.70.0 peer=false dev=true optional=false
+eslint-plugin-jsx-a11y not installed
+astro peerDependenciesMeta: {"@astrojs/markdown-remark":{"optional":true}}
+preact peerDependenciesMeta: {"preact-render-to-string":{"optional":true}}
