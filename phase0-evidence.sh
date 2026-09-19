@@ -24,6 +24,7 @@ serve() {
 }
 
 run 00-git.txt "git rev-parse HEAD && git status --short && node -v && npm -v"
+run 00-environment.txt "cat /home/claude/ffg-env.sh && which node && node -v && npm -v && uname -m && grep PRETTY_NAME /etc/os-release && $CHROME --version"
 run 01-npm-ci.txt "rm -rf node_modules dist && npm ci --no-audit --no-fund 2>&1 | grep -v 'npm warn deprecated'"
 run 01-npm-ci.txt "ls node_modules/@pagefind"
 run 02-versions.txt "node check-versions.mjs"
@@ -42,6 +43,14 @@ run 06-browser-security21.txt "node browser-spike.mjs"
 # Build with the committed config (proposal 0001 hash + proposal 0003 markdown setting).
 run 07-build-committed.txt "npx astro build 2>&1 | grep -vE '^\s*$'"
 run 08-csp-committed.txt "python3 csp-all-pages.py"
+
+# Proposal 0004: the layout prototype is built by the committed config above (src/pages/og-proposal).
+run 23-og-proposal-0004.txt "grep -F 'og-proposal' $OUT/07-build-committed.txt"
+run 23-og-proposal-0004.txt "python3 -c \"import re;src=open('src/pages/og-proposal/[...route].ts',encoding='utf8').read();[print(len(t),'chars ->',52 if len(t)>60 else 64,'px:',t) for t in re.findall(r'title: \\\"([^\\\"]+)\\\"',src)]\""
+for f in schemes/cgss schemes/long schemes/longer regions/KL schemes/sipp schemes/iic regions/RJ regions/DH; do
+  run 23-og-proposal-0004.txt "python3 -c \"import struct;b=open('dist/og-proposal/$f.png','rb').read(32);print('$f', b[:8]==b'\\\\x89PNG\\\\r\\\\n\\\\x1a\\\\n', struct.unpack('>II',b[16:24]))\" && cp dist/og-proposal/$f.png $OUT/23-og-proposal-${f#*/}.png"
+done
+run 23-og-proposal-0004.txt "find dist -iname '*wordmark*' | wc -l"
 serve
 run 09-browser-committed.txt "node browser-spike.mjs"
 run 10-pagefind-main-thread-with-wasm.txt "node noworker-check.mjs"

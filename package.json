@@ -6,7 +6,7 @@
     "node": "22.x"
   },
   "scripts": {
-    "build": "astro build",
+    "build": "node -v && astro build",
     "preview": "astro preview --port 4321",
     "test:zod": "vitest run tests/zod.test.ts",
     "zod:tsx": "tsx zod-tsx.ts",
