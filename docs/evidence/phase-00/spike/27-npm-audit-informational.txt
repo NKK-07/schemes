@@ -1,0 +1,3 @@
+$ npm audit --omit=dev --audit-level=high   (informational, whole locked set)
+found 0 vulnerabilities
+exit=0

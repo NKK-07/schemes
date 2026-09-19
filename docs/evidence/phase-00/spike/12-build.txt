@@ -1,0 +1,53 @@
+$ npm run build
+
+> build
+> astro build
+
+▶ Astro collects anonymous usage data.
+  This information helps us improve Astro.
+  Run "astro telemetry disable" to opt-out.
+  https://astro.build/telemetry
+
+15:32:22 [WARN] [config] Shiki syntax highlighting uses inline styles that are not compatible with Content Security Policy (CSP). Consider using Prism syntax highlighting instead, or disable CSP if Shiki is required.
+15:32:23 [types] Generated 142ms
+15:32:23 [build] output: "static"
+15:32:23 [build] mode: "static"
+15:32:23 [build] directory: /home/claude/ffg-spike/spike/dist/
+15:32:23 [build] Collecting build info...
+15:32:23 [build] ✓ Completed in 194ms.
+15:32:23 [build] Building static entrypoints...
+15:32:23 [vite] ✓ built in 389ms
+15:32:23 [vite] ✓ built in 63ms
+15:32:23 [build] Rearranging server assets...
+
+ generating static routes 
+15:32:23   ├─ /og/schemes/cgss.png/[astro-og-canvas] Loading ../reference/fonts/newsreader-500.v1.woff2
+[astro-og-canvas] Loading ../reference/fonts/plexsans-400.v1.woff2
+[astro-og-canvas] Loaded 2 font families:
+Newsreader Medium, IBM Plex Sans
+ (+315ms) 
+15:32:23   ├─ /second/index.html (+17ms) 
+15:32:23   ├─ /shortlist/index.html (+4ms) 
+15:32:23   ├─ /index.html (+5ms) 
+15:32:23 ✓ Completed in 367ms.
+
+15:32:24 [build] ✓ Completed in 856ms.
+15:32:24 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+15:32:24 [ERROR] [pagefind] An unhandled error occurred while running the "astro:build:done" hook
+Failed to install either of [pagefind_extended, pagefind]. Most likely the platform linux-x64 is not yet a supported architecture.
+Please open an issue at https://github.com/pagefind/pagefind and paste this error message in full.
+If you believe this package should be compatible with your system,
+you can try downloading a release binary directly from https://github.com/pagefind/pagefind/releases
+  Location:
+    /home/claude/ffg-spike/spike/node_modules/pagefind/lib/resolveBinary.js:27:9
+  Stack trace:
+    at resolveBinaryPath (file:///home/claude/ffg-spike/spike/node_modules/pagefind/lib/resolveBinary.js:27:9)
+    at launch (file:///home/claude/ffg-spike/spike/node_modules/pagefind/lib/index.js:15:29)
+    at new Promise (<anonymous>)
+    at astro:build:done (/home/claude/ffg-spike/spike/node_modules/astro-pagefind/src/pagefind.ts:43:88)
+    at withTakingALongTimeMsg (file:///home/claude/ffg-spike/spike/node_modules/astro/dist/integrations/hooks.js:34:18)
+    at runHookBuildDone (file:///home/claude/ffg-spike/spike/node_modules/astro/dist/integrations/hooks.js:464:11)
+    at async AstroBuilder.build (file:///home/claude/ffg-spike/spike/node_modules/astro/dist/core/build/index.js:181:5)
+    at async build (file:///home/claude/ffg-spike/spike/node_modules/astro/dist/core/build/index.js:50:3)
+    at async runCommand (file:///home/claude/ffg-spike/spike/node_modules/astro/dist/cli/index.js:192:7)
+exit=1

@@ -1,0 +1,11 @@
+$ (negative control) scriptDirective.resources without 'wasm-unsafe-eval'; npm run build; npm run browser
+{
+ "search:kerala": [
+  "/"
+ ],
+ "search:prototype": [
+  "/second/"
+ ],
+ "cspViolations": [],
+ "consoleErrors": []
+}

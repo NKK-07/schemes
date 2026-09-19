@@ -1,0 +1,3 @@
+$ (variant) markdown: { syntaxHighlight: false }; npm run build
+15:39:39 [build] Complete!
+exit=0

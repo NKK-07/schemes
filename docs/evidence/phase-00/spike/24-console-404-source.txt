@@ -1,0 +1,4 @@
+$ node which404.mjs
+[]
+exit=0
+consoleErrors after adding /favicon.ico: [] cspViolations: []

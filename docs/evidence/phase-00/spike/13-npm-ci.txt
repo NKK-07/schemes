@@ -1,0 +1,7 @@
+$ rm -rf node_modules && npm ci
+
+added 864 packages in 13s
+exit=0
+$ ls node_modules/@pagefind
+component-ui
+linux-x64

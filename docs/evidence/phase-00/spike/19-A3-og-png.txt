@@ -1,0 +1,4 @@
+$ python3 read PNG IHDR of dist/og/schemes/cgss.png
+signature ok: True
+width x height: (1200, 630)
+exit=0

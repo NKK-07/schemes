@@ -1,0 +1,31 @@
+$ npm run build
+> build
+> astro build
+15:33:03 [WARN] [config] Shiki syntax highlighting uses inline styles that are not compatible with Content Security Policy (CSP). Consider using Prism syntax highlighting instead, or disable CSP if Shiki is required.
+15:33:03 [types] Generated 130ms
+15:33:03 [build] output: "static"
+15:33:03 [build] mode: "static"
+15:33:03 [build] directory: /home/claude/ffg-spike/spike/dist/
+15:33:03 [build] Collecting build info...
+15:33:03 [build] ✓ Completed in 183ms.
+15:33:03 [build] Building static entrypoints...
+15:33:03 [vite] ✓ built in 333ms
+15:33:03 [vite] ✓ built in 54ms
+15:33:03 [build] Rearranging server assets...
+ generating static routes 
+15:33:03   ├─ /og/schemes/cgss.png/[astro-og-canvas] Loading ../reference/fonts/newsreader-500.v1.woff2
+[astro-og-canvas] Loading ../reference/fonts/plexsans-400.v1.woff2
+[astro-og-canvas] Loaded 2 font families:
+Newsreader Medium, IBM Plex Sans
+ (+313ms) 
+15:33:04   ├─ /second/index.html (+15ms) 
+15:33:04   ├─ /shortlist/index.html (+3ms) 
+15:33:04   ├─ /index.html (+5ms) 
+15:33:04 ✓ Completed in 355ms.
+15:33:04 [build] ✓ Completed in 781ms.
+15:33:04 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+15:33:04 [pagefind] Pagefind indexed 3 pages
+15:33:04 [pagefind] Pagefind wrote index to /home/claude/ffg-spike/spike/dist/pagefind
+15:33:04 [build] 3 page(s) built in 998ms
+15:33:04 [build] Complete!
+exit=0

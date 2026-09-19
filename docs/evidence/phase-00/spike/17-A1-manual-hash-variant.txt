@@ -1,0 +1,9 @@
+$ (variant) scriptDirective.hashes = ["sha256-D0X/RudTxbWCIEUFjAmwaX2l1yKdJadWf7FFW3+mpZE="]; npm run build
+15:34:39 [build] ✓ Completed in 108ms.
+15:34:39 ✓ Completed in 240ms.
+15:34:39 [build] ✓ Completed in 672ms.
+15:34:39 [build] Complete!
+exit=0
+inline script 203 hash listed
+inline script 316 hash listed
+inline script 4380 hash listed
