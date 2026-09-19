@@ -28,6 +28,10 @@ run 01-npm-ci.txt "rm -rf node_modules dist && npm ci --no-audit --no-fund 2>&1 
 run 01-npm-ci.txt "ls node_modules/@pagefind"
 run 02-versions.txt "node check-versions.mjs"
 run 03-engines.txt "node engines-scan.mjs"
+run 03b-npm-view.txt "./npm-view-all.sh"
+run 03c-peer-check.txt "node peer-check.cjs docs-evidence-v2/03b-npm-view.txt 22.22.2"
+run 03c-peer-check.txt "node peer-check.cjs docs-evidence-v2/03b-npm-view.txt 22.22.3"
+run 03d-data-sanity.txt "node data-sanity.mjs"
 
 # Build with the CSP exactly as SECURITY §2.1 (no manual hash): shows the unhashed boot script and the Shiki warning.
 run 04-build-security21.txt "npx astro build --config astro.config.security21.mjs 2>&1 | grep -vE '^\s*$'"
