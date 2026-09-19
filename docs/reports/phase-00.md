@@ -142,6 +142,8 @@ None. Phase 0 compared counts only (`03d-data-sanity.txt`, all MATCH); facts are
 
 ## 11. Audit responses (audit 1, `docs/audits/phase-00-audit-1.md`)
 
+Every FIXED item below is in commit `9189480` on `phase/00-recon` (revision 2), with fresh evidence from the spike at `d890776` (`spike-v2/`) and `b86c7c3` (`23-og-proposal-*`).
+
 | Finding | Sev. | Response |
 |---|---|---|
 | A00-1-001 SPEC edited and committed to `main` by the builder | P0 | **Needs the owner (BLOCKED OWNER-4).** The builder cannot dispute or defer a P0. Facts are set out in OWNER-4, with the owner's answer quoted. Nothing further was committed to `main`. |
