@@ -10,7 +10,8 @@
     "preview": "astro preview --port 4321",
     "test:zod": "vitest run tests/zod.test.ts",
     "zod:tsx": "tsx zod-tsx.ts",
-    "browser": "node browser-spike.mjs"
+    "browser": "node browser-spike.mjs",
+    "webkit": "node webkit-check.mjs"
   },
   "dependencies": {
     "@astrojs/preact": "6.0.5",
