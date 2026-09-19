@@ -4,12 +4,12 @@ const fs = require("fs");
 const semver = require("semver");
 const txt = fs.readFileSync(process.argv[2], "utf8");
 const node = process.argv[3];
-const blocks = txt.split(/^===== /m).filter((b) => b.trim());
+const blocks = txt.split(/^===== /m).filter((b) => /^\S+@[0-9.]+ \(/.test(b));
 const locked = {}; const info = {};
 for (const b of blocks) {
   const m = b.split("\n")[0].match(/^(.+)@([0-9.]+) /);
   locked[m[1]] = m[2];
-  info[m[1]] = JSON.parse(b.slice(b.indexOf("\n") + 1, b.lastIndexOf("exit=")));
+  info[m[1]] = JSON.parse(b.slice(b.indexOf("\n") + 1, b.indexOf("npm-view-exit=")));
 }
 let issues = 0;
 for (const [pkg, i] of Object.entries(info)) {

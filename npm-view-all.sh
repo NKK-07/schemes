@@ -7,5 +7,5 @@ for (const m of md.matchAll(/^\| ([@a-z0-9/\-]+) \| ([0-9.]+) \| (dep|dev) \| (\
 ' | while read name ver kind phase; do
   echo "===== $name@$ver ($kind, phase $phase)"
   npm view "$name@$ver" version engines peerDependencies --json
-  echo "exit=$?"
+  echo "npm-view-exit=$?"
 done
