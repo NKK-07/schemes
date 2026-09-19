@@ -1,0 +1,11 @@
+$ npx vitest run tests/zod.test.ts --reporter=verbose 2>&1 | grep -E 'A10|Test Files|Tests'
+ ✓ tests/zod.test.ts > A10 astro/zod works in Vitest 3ms
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+exit=0
+$ npx tsx zod-tsx.ts
+A10 tsx: true false
+exit=0
+$ grep -o 'data-pagefind-meta="id:cgss"' dist/index.html
+data-pagefind-meta="id:cgss"
+exit=0

@@ -1,0 +1,14 @@
+$ OG_TITLE_FAMILY='Newsreader Medium' OG_DESC_FAMILY='IBM Plex Mono Medium' npx astro build 2>&1 | grep -E 'Loaded|families|Newsreader|Plex|Complete' && cp dist/og/schemes/cgss.png docs-evidence-v2/19-og-exact-mono.png
+16:21:23 [build] ✓ Completed in 97ms.
+[astro-og-canvas] Loaded 3 font families:
+Newsreader Medium, IBM Plex Sans, IBM Plex Mono Medium
+16:21:24 ✓ Completed in 357ms.
+16:21:24 [build] ✓ Completed in 830ms.
+16:21:24 [build] Complete!
+exit=0
+$ OG_TITLE_FAMILY='Newsreader Medium' OG_DESC_FAMILY='IBM Plex Mono' npx astro build 2>&1 | grep -E 'Complete' && cp dist/og/schemes/cgss.png docs-evidence-v2/19-og-wrong-mono.png
+16:21:25 [build] ✓ Completed in 94ms.
+16:21:26 ✓ Completed in 356ms.
+16:21:26 [build] ✓ Completed in 827ms.
+16:21:26 [build] Complete!
+exit=0

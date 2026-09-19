@@ -1,0 +1,9 @@
+$ node data-sanity.mjs
+schemes: reference=115 golden=115 MATCH
+central: reference=66 golden=66 MATCH
+state: reference=49 golden=49 MATCH
+student: reference=49 golden=49 MATCH
+regions: reference=36 golden=36 MATCH
+regionsWithSchemes: reference=35 golden=35 MATCH
+golden.indexablePages = 175 (not recomputable before routes exist)
+exit=0

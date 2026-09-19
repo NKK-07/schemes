@@ -1,0 +1,9 @@
+$ mv dist/favicon.ico /tmp/ffg-favicon.ico && node browser-spike.mjs | grep -A2 consoleErrors
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+exit=0
+$ mv /tmp/ffg-favicon.ico dist/favicon.ico && node browser-spike.mjs | grep -A1 consoleErrors
+  "consoleErrors": [],
+  "httpErrors": [],
+exit=0

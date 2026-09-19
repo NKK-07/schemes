@@ -1,0 +1,3 @@
+$ BROWSERS=chromium CHROMIUM_PATH=/opt/pw-browsers/chromium node webkit-check.mjs
+{"browser":"chromium","version":"141.0.7390.37","page1Changed":true,"crossTabSynced":true,"ms":6,"before2":"Saved: 0","after2":"Saved: 1","cspViolations":[]}
+exit=0

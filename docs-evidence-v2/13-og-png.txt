@@ -1,0 +1,4 @@
+$ python3 -c "import struct;b=open('dist/og/schemes/cgss.png','rb').read(32);print('PNG signature:',b[:8]==b'\\x89PNG\\r\\n\\x1a\\n');print('width x height:',struct.unpack('>II',b[16:24]))" && cp dist/og/schemes/cgss.png docs-evidence-v2/13-og-default-families.png
+PNG signature: True
+width x height: (1200, 630)
+exit=0

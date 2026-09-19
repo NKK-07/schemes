@@ -1,0 +1,31 @@
+$ node browser-spike.mjs
+{
+  "htmlHasJsClass": true,
+  "islandCountAfterClick": "Saved: 1",
+  "crossTabMs": 19,
+  "crossTab": {
+    "before": "Saved: 1",
+    "after": "Saved: 2"
+  },
+  "search:kerala": [
+    "/"
+  ],
+  "search:prototype": [
+    "/second/"
+  ],
+  "pagefindRequests": [
+    "/pagefind/pagefind.js",
+    "/pagefind/pagefind-worker.js",
+    "/pagefind/pagefind-entry.json?ts=1789834848392",
+    "/pagefind/pagefind.en-in_465d8c9c10b7a.pf_meta",
+    "/pagefind/wasm.en-in.pagefind",
+    "/pagefind/index/en-in_7bd0bc2.pf_index",
+    "/pagefind/fragment/en-in_69a4524.pf_fragment",
+    "/pagefind/fragment/en-in_a77542c.pf_fragment"
+  ],
+  "cspViolations": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "browser": "141.0.7390.37"
+}
+exit=0
