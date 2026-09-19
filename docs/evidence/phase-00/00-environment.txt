@@ -23,3 +23,8 @@ chromium_headless_shell-1194
 ffmpeg-1011
 $ env | grep -i playwright
 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers
+$ source env (Node 22.23.2 from npm package node-linux-x64, because nodejs.org is blocked by the sandbox proxy)
+$ node -v
+v22.23.2
+$ npm -v
+10.9.7
