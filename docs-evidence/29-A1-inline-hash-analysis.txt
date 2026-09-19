@@ -1,0 +1,14 @@
+$ (config as SECURITY §2.1, no manual hash) npm run build && python3 csp-inline-check.py
+CSP meta tag at offset 441
+script at offset 221 (203 bytes): NOT LISTED
+script at offset 1603 (316 bytes): hash listed
+script at offset 1936 (4380 bytes): hash listed
+style at offset 1529 (59 bytes): hash listed
+exit=0
+$ (with proposal 0001 manual hash) npm run build && python3 csp-inline-check.py
+CSP meta tag at offset 441
+script at offset 221 (203 bytes): hash listed
+script at offset 1657 (316 bytes): hash listed
+script at offset 1990 (4380 bytes): hash listed
+style at offset 1583 (59 bytes): hash listed
+exit=0
