@@ -1,0 +1,110 @@
+{
+  "_about": "AC-FUNC-28 and SECURITY §5 rule 5. Visiting / with each hash must end on expect (location.pathname, no hash). Paths come from url-map.json at build; anything unknown goes to /. Hashes that do not start with #/ are left alone (no redirect). Frozen; agents may not edit (AGENTS F-01).",
+  "cases": [
+    {
+      "hash": "#/s/cgss",
+      "expect": "/schemes/credit-guarantee-scheme-for-startups/"
+    },
+    {
+      "hash": "#/s/prayas",
+      "expect": "/schemes/nidhi-prayas-prototype-grant/"
+    },
+    {
+      "hash": "#/s/kl-seed",
+      "expect": "/states/kerala/ksum-seed-fund-soft-loan/"
+    },
+    {
+      "hash": "#/s/idex",
+      "expect": "/schemes/idex-defence-startup-challenges/"
+    },
+    {
+      "hash": "#/s/ka-elevate",
+      "expect": "/states/karnataka/elevate-idea2poc-grant/"
+    },
+    {
+      "hash": "#/map/KL",
+      "expect": "/states/kerala/"
+    },
+    {
+      "hash": "#/map/kl",
+      "expect": "/states/kerala/"
+    },
+    {
+      "hash": "#/map",
+      "expect": "/states/"
+    },
+    {
+      "hash": "#/map/",
+      "expect": "/states/"
+    },
+    {
+      "hash": "#/browse",
+      "expect": "/schemes/"
+    },
+    {
+      "hash": "#/start",
+      "expect": "/start-here/"
+    },
+    {
+      "hash": "#/quiz",
+      "expect": "/eligibility-finder/"
+    },
+    {
+      "hash": "#/updates",
+      "expect": "/whats-new/"
+    },
+    {
+      "hash": "#/glossary",
+      "expect": "/glossary/"
+    },
+    {
+      "hash": "#/shortlist",
+      "expect": "/shortlist/"
+    },
+    {
+      "hash": "#/compare",
+      "expect": "/compare/"
+    },
+    {
+      "hash": "#/s/no-such-id",
+      "expect": "/"
+    },
+    {
+      "hash": "#/map/XX",
+      "expect": "/"
+    },
+    {
+      "hash": "#/s/../../etc",
+      "expect": "/"
+    },
+    {
+      "hash": "#/s/javascript:alert(1)",
+      "expect": "/"
+    },
+    {
+      "hash": "#//evil.example",
+      "expect": "/"
+    },
+    {
+      "hash": "#/%2F%2Fevil.example",
+      "expect": "/"
+    },
+    {
+      "hash": "#/s/%2e%2e%2f",
+      "expect": "/"
+    },
+    {
+      "hash": "#/unknown",
+      "expect": "/"
+    },
+    {
+      "hash": "#/s/",
+      "expect": "/"
+    }
+  ],
+  "untouched": [
+    "#main",
+    "#g-dpiit",
+    ""
+  ]
+}

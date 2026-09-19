@@ -1,0 +1,13 @@
+{
+  "_about": "AC-FUNC-10. Each query typed into the /schemes/ search box must return a result set that contains every id in mustInclude (other results are allowed). Each noMatch query must show the empty state. Frozen; agents may not edit (AGENTS F-01).",
+  "queries": [
+    { "q": "kerala", "mustInclude": ["kl-grants", "kl-seed", "kl-iedc"] },
+    { "q": "patent", "mustInclude": ["sipp"] },
+    { "q": "prototype grant", "mustInclude": ["prayas"] },
+    { "q": "credit guarantee", "mustInclude": ["cgss", "mcgs"] },
+    { "q": "semiconductor", "mustInclude": ["dli"] },
+    { "q": "fund of funds", "mustInclude": ["fof2"] },
+    { "q": "idex", "mustInclude": ["idex"] }
+  ],
+  "noMatch": ["qwxzvbn", "zzyzxplorp"]
+}

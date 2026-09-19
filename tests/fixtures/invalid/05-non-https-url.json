@@ -1,0 +1,54 @@
+{
+  "id": "invalid-05",
+  "name": "NIDHI-PRAYAS (prototype grant)",
+  "abbr": "PRAYAS",
+  "body": "DST — NIDHI programme (via PRAYAS centres at TBIs)",
+  "level": "central",
+  "types": [
+    "grant"
+  ],
+  "stages": [
+    "idea"
+  ],
+  "sectors": [
+    "all",
+    "deeptech",
+    "manufacturing"
+  ],
+  "amount": "Up to ₹10 lakh",
+  "amountLakh": 10,
+  "student": true,
+  "needsDpiit": false,
+  "status": "calls",
+  "effort": 2,
+  "tier": "top",
+  "addedOn": "2016-01",
+  "summary": "The go-to grant for turning an idea into a working prototype — especially hardware. Individuals and students can apply before incorporating a company.",
+  "benefits": [
+    "Up to ₹10 lakh to build a prototype or proof of concept",
+    "Mentoring, lab and fabrication access at the host incubator"
+  ],
+  "eligibility": [
+    "Students, researchers, innovators or early startups with a technology idea",
+    "You don't need to be incorporated",
+    "Apply to one PRAYAS centre at a time"
+  ],
+  "documents": [
+    "kyc",
+    "prop",
+    "student",
+    "edu"
+  ],
+  "steps": [
+    "Find a PRAYAS centre near you on the NIDHI-PRAYAS portal",
+    "Apply during its call with a proposal and budget",
+    "Pitch to the centre's committee; funds are released in milestones"
+  ],
+  "officialUrl": "http://nidhi-prayas.org/",
+  "stacksWith": [
+    "eir",
+    "ssp",
+    "sipp"
+  ],
+  "verifiedNote": "Verified Sep 2026 (nidhi.dst.gov.in)"
+}

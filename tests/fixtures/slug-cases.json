@@ -1,0 +1,64 @@
+{
+  "_about": "AC-ROUTE-02 synthetic cases for the slug algorithm in ARCHITECTURE §5 (the real data has no 64-character trims or collisions). slugify: input → slugify(input). trim64: input → trim(slugify(input), 64). scopes: scheme lists run in order through schemeSlug with collision handling; expect is the resulting slug per id. Frozen; agents may not edit (AGENTS F-01).",
+  "slugify": {
+    "Scheme with ₹10 Lakh & More": "scheme-with-rs-10-lakh-and-more",
+    "Founders’ Fund for Women’s Tech": "founders-fund-for-womens-tech",
+    "Crédit Agricole Startup Fund": "credit-agricole-startup-fund",
+    "  --Hello,   World!!--  ": "hello-world",
+    "NIDHI-PRAYAS (prototype grant)": "nidhi-prayas-prototype-grant",
+    "Research, Development & Innovation (RDI) Fund": "research-development-and-innovation-rdi-fund",
+    "Pradhan Mantri Formalisation of Micro Food Processing Enterprises Scheme for Startups and Small Units": "pradhan-mantri-formalisation-of-micro-food-processing-enterprises-scheme-for-startups-and-small-units",
+    "Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnop-extra": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnop-extra"
+  },
+  "trim64": {
+    "Scheme with ₹10 Lakh & More": "scheme-with-rs-10-lakh-and-more",
+    "Founders’ Fund for Women’s Tech": "founders-fund-for-womens-tech",
+    "Crédit Agricole Startup Fund": "credit-agricole-startup-fund",
+    "  --Hello,   World!!--  ": "hello-world",
+    "NIDHI-PRAYAS (prototype grant)": "nidhi-prayas-prototype-grant",
+    "Research, Development & Innovation (RDI) Fund": "research-development-and-innovation-rdi-fund",
+    "Pradhan Mantri Formalisation of Micro Food Processing Enterprises Scheme for Startups and Small Units": "pradhan-mantri-formalisation-of-micro-food-processing",
+    "Abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnop-extra": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijkl"
+  },
+  "scopes": [
+    {
+      "schemes": [
+        {
+          "id": "a1",
+          "name": "Seed Grant Scheme",
+          "level": "central"
+        },
+        {
+          "id": "b2",
+          "name": "Seed Grant Scheme",
+          "level": "central"
+        },
+        {
+          "id": "c3",
+          "name": "Seed Grant Scheme",
+          "level": "state",
+          "region": "KL"
+        },
+        {
+          "id": "d4",
+          "name": "Seed Grant Scheme",
+          "level": "state",
+          "region": "KA"
+        },
+        {
+          "id": "e5",
+          "name": "Seed Grant Scheme!",
+          "level": "state",
+          "region": "KL"
+        }
+      ],
+      "expect": {
+        "a1": "seed-grant-scheme",
+        "b2": "seed-grant-scheme-b2",
+        "c3": "seed-grant-scheme",
+        "d4": "seed-grant-scheme",
+        "e5": "seed-grant-scheme-e5"
+      }
+    }
+  ]
+}

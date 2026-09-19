@@ -1,0 +1,193 @@
+{
+  "generatedFrom": "reference/data-source (legacy data, 18 Sep 2026)",
+  "buildDate": "2026-09-18T12:00:00+05:30",
+  "totals": {
+    "schemes": 115,
+    "central": 66,
+    "state": 49,
+    "student": 49,
+    "regions": 36,
+    "regionsWithSchemes": 35,
+    "indexablePages": 175
+  },
+  "topics": {
+    "grants": 69,
+    "loans-and-credit-guarantees": 20,
+    "equity-funding": 25,
+    "tax-and-compliance": 12,
+    "patents-and-ip": 15,
+    "selling-to-government": 7,
+    "incubation-and-mentoring": 23,
+    "students": 49
+  },
+  "sectors": {
+    "deep-tech": 20,
+    "software-and-ai": 11,
+    "manufacturing-and-hardware": 16,
+    "biotech-and-health": 12,
+    "agriculture-and-food": 11,
+    "energy-and-climate": 8,
+    "space-tech": 6,
+    "defence-and-aerospace": 4
+  },
+  "stateCounts": {
+    "LA": 1,
+    "JK": 1,
+    "HP": 1,
+    "PB": 1,
+    "CH": 1,
+    "UK": 1,
+    "AR": 1,
+    "RJ": 1,
+    "HR": 1,
+    "DL": 1,
+    "UP": 1,
+    "BR": 1,
+    "SK": 1,
+    "AS": 1,
+    "NL": 1,
+    "GJ": 2,
+    "MP": 1,
+    "CG": 1,
+    "JH": 1,
+    "WB": 1,
+    "ML": 1,
+    "MN": 1,
+    "DH": 1,
+    "MH": 3,
+    "TG": 3,
+    "OD": 1,
+    "TR": 1,
+    "MZ": 1,
+    "GA": 1,
+    "KA": 5,
+    "AP": 2,
+    "LD": 0,
+    "KL": 3,
+    "TN": 3,
+    "PY": 1,
+    "AN": 1
+  },
+  "filters": {
+    "type=grant": 61,
+    "stage=idea": 73,
+    "type=grant&stage=idea": 48,
+    "st=KL": 69,
+    "level=S": 49,
+    "student=1": 49,
+    "open=1": 106,
+    "sector=bio": 91,
+    "tier=top": 25,
+    "tier=major": 72,
+    "type=loan,guarantee&st=KA": 14
+  },
+  "finder": {
+    "kerala-student-software-grant": {
+      "answers": {
+        "st": "KL",
+        "stage": "idea",
+        "sector": "tech",
+        "student": "yes",
+        "need": "grant",
+        "dpiit": "no"
+      },
+      "count": 20,
+      "top5": [
+        "indiaai",
+        "tide",
+        "kl-grants",
+        "genesis",
+        "kl-iedc"
+      ],
+      "scores": [
+        15.1,
+        15.1,
+        14.6,
+        14.3,
+        13.8
+      ]
+    },
+    "central-only-biotech-idea-grant": {
+      "answers": {
+        "st": "",
+        "stage": "idea",
+        "sector": "bio",
+        "student": "no",
+        "need": "grant",
+        "dpiit": "yes"
+      },
+      "count": 20,
+      "top5": [
+        "big",
+        "birac-student",
+        "bioe3",
+        "eir",
+        "pmegp"
+      ],
+      "scores": [
+        12.6,
+        11.8,
+        11,
+        10.1,
+        10.1
+      ]
+    },
+    "karnataka-growth-manufacturing-loan": {
+      "answers": {
+        "st": "KA",
+        "stage": "growth",
+        "sector": "manufacturing",
+        "student": "no",
+        "need": "loan",
+        "dpiit": "yes"
+      },
+      "count": 20,
+      "top5": [
+        "tdb",
+        "mcgs",
+        "smile",
+        "cgss",
+        "cgtmse"
+      ],
+      "scores": [
+        11.8,
+        11,
+        11,
+        10.1,
+        10.1
+      ]
+    }
+  },
+  "similar": {
+    "cgss": [
+      "cgtmse",
+      "aif",
+      "mcgs",
+      "rdi"
+    ],
+    "prayas": [
+      "tdf",
+      "dli",
+      "idex",
+      "fof2"
+    ],
+    "kl-seed": [
+      "rdi",
+      "indiaai",
+      "samridh",
+      "tide"
+    ],
+    "idex": [
+      "ka-nxt",
+      "ka-policy",
+      "anic",
+      "d2d"
+    ],
+    "ka-elevate": [
+      "idex",
+      "ka-policy",
+      "anic",
+      "birac-student"
+    ]
+  }
+}

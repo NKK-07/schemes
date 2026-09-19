@@ -1,0 +1,50 @@
+{
+  "id": "invalid-03",
+  "name": "KSUM Seed Fund (soft loan)",
+  "abbr": "KSUM Seed",
+  "body": "Kerala Startup Mission",
+  "level": "state",
+  "types": [
+    "loan"
+  ],
+  "stages": [
+    "early"
+  ],
+  "sectors": [
+    "all",
+    "tech"
+  ],
+  "amount": "Up to ₹15 lakh at 6%",
+  "amountLakh": 15,
+  "student": false,
+  "needsDpiit": true,
+  "status": "open",
+  "effort": 2,
+  "tier": "major",
+  "addedOn": "2023-01",
+  "summary": "A soft loan of up to ₹15 lakh at 6% simple interest for product startups, with a 12-month moratorium and 36 monthly repayments.",
+  "benefits": [
+    "Up to ₹15 lakh at 6% simple interest",
+    "12-month moratorium, no prepayment penalty"
+  ],
+  "eligibility": [
+    "Kerala LLP or private limited company with a KSUM ID and DPIIT recognition",
+    "Innovative product or technology (not pure services or trading)"
+  ],
+  "documents": [
+    "inc",
+    "dpiit",
+    "dom",
+    "fin",
+    "kyc"
+  ],
+  "steps": [
+    "Apply on the KSUM portal",
+    "Evaluation and loan agreement"
+  ],
+  "officialUrl": "https://startupmission.kerala.gov.in/schemes/seed-fund",
+  "stacksWith": [
+    "kl-grants"
+  ],
+  "verifiedNote": "Verified Sep 2026"
+}
