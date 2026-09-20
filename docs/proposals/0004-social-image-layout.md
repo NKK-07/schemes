@@ -6,7 +6,7 @@
 | Date | 2026-09-19 (revised after audit 2, finding A00-2-002) |
 | Changes | DESIGN §5 (replaced); ARCHITECTURE §3 (one line added under `src/`); ARCHITECTURE §8.4 (two sentences added); PHASES Phase 8 task 3 (replaced) |
 | Triggered by | Audit 1 finding A00-1-012 (assumption A3 tested too narrowly) |
-| Status | Open |
+| Status | Approved by the owner in chat, 20 Sep 2026; applied to the locked documents in branch proposals/0001-0004-approved |
 
 ## Problem
 DESIGN §5 asks for four text runs in three families: a mono label at the top, the title (64 px, dropping to 52 px after two lines, max 3 lines), the amount in mono in the accent colour, and "{where} · {status}" in sans. `astro-og-canvas` 0.13.2 (locked) draws only a `title` and a `description`, each with one font setting, plus an optional `logo` image, a background and a border (reviewer's reading of its types and source, audit 1 A00-1-012). It cannot measure how many lines a title will take before drawing it, and it has no line limit.

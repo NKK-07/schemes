@@ -6,7 +6,7 @@
 | Date | 2026-09-19 (revised after audit 1, A00-1-007, and audit 2, A00-2-001) |
 | Changes | ARCHITECTURE §2 (Node line); PHASES Phase 0 task 2; PHASES Phase 1 task 1; ACCEPTANCE AC-OPS-03.1; TESTING §4 (the `AC-OPS-03` row of the build-check table) |
 | Triggered by | Phase 0, task 3 (peer and engine ranges) |
-| Status | Open |
+| Status | Approved by the owner in chat, 20 Sep 2026; applied to the locked documents in branch proposals/0001-0004-approved |
 
 ## Problem
 The pack says Node "22.x" (ARCHITECTURE §2, PHASES Phase 1 task 1, AC-OPS-03.1, TESTING §4) and "≥ 22.12, < 23" (PHASES Phase 0 task 2). The locked tree needs more.

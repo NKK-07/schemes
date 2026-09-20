@@ -6,7 +6,7 @@
 | Date | 2026-09-19 (revised after audit 1, finding A00-1-008) |
 | Changes | SECURITY §2.1 (config block and the paragraph under it); DESIGN §6.2 (first bullet); TESTING §5 (one unit test added to the layout) |
 | Triggered by | Phase 0, assumption A1 (FAILED as specified) |
-| Status | Open |
+| Status | Approved by the owner in chat, 20 Sep 2026; applied to the locked documents in branch proposals/0001-0004-approved |
 
 ## Problem
 SECURITY §2.1 says Astro "adds a `sha256-…` hash for every inline script and style it emits (island hydration, the theme boot script in `Head.astro`)". The second half is false.

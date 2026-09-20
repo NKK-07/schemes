@@ -6,7 +6,7 @@
 | Date | 2026-09-19 (revised after audit 1, finding A00-1-009) |
 | Changes | ARCHITECTURE §5 (Astro config line); ARCHITECTURE §2 (the note that `astro.config.mjs` starts with "only the core settings"); PHASES Phase 1 task 3 (the list of core settings) |
 | Triggered by | Phase 0 spike build log |
-| Status | Open |
+| Status | Approved by the owner in chat, 20 Sep 2026; applied to the locked documents in branch proposals/0001-0004-approved |
 
 ## Problem
 With `security.csp` enabled, every Astro 7.3.3 build prints:
