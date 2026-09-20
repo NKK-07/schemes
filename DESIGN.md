@@ -286,11 +286,11 @@ Breadcrumbs Home / States → eyebrow "State & UT schemes", `h1` "What your stat
 
 ## 5. Social images (`/og/*.png`, 1200×630)
 
-- Background `#EFEADF`, 64px padding, 8px `#5B3FA0` bar on the left edge.
-- Top: "FOUNDER'S FIELD GUIDE" in IBM Plex Mono 600, 26px, `#55546A`.
-- Middle: title in Newsreader 500, 64px (reduce to 52px if more than 2 lines), `#1D1F2B`, max 3 lines.
-- Bottom: for schemes, `{amount}` in Plex Mono 500 30px `#5B3FA0` and "{All India | region} · {status label}" in Plex Sans 26px `#55546A`; for regions, "{n} state schemes + every central scheme"; default image: "Government schemes for Indian startups".
-- Fonts: the same files as §3.1. Light theme only.
+- 1200×630 PNG, drawn by `astro-og-canvas` with only the options it has: `bgGradient` `[[239,234,223]]` (`#EFEADF`), `padding` 64, `border` 8px `[91,63,160]` (`#5B3FA0`) on `inline-start` (the left edge).
+- Top (`logo`): the image `src/assets/og-wordmark.png` — "FOUNDER'S FIELD GUIDE" in IBM Plex Mono 600, 26px, letter-spacing .12em, `#55546A`, transparent background, 404×34px — drawn at `size: [404]`. It is read at build time and is not published.
+- Middle (`title`): the page's `og:title` (ARCHITECTURE §8.1) in Newsreader 500 (`families: ["Newsreader Medium"]`), `#1D1F2B`, `lineHeight` 1.1; 64px, or 52px when the title is longer than 60 characters; max 3 lines: the build fails if a social-image title is longer than 100 characters.
+- Bottom (`description`): IBM Plex Sans 400 (`families: ["IBM Plex Sans"]`), 28px, `#55546A`. For schemes, "{amount} · {All India | region} · {status label}"; for regions, "{n} state schemes + every central scheme"; default image: "Government schemes for Indian startups".
+- Fonts: exactly `newsreader-500.v1.woff2` and `plexsans-400.v1.woff2` from `public/fonts/`, with the family names exactly `Newsreader Medium` and `IBM Plex Sans` (a wrong name falls back silently). Light theme only.
 
 ## 6. Interaction
 
@@ -299,7 +299,7 @@ Breadcrumbs Home / States → eyebrow "State & UT schemes", `h1` "What your stat
 - Motion only inside `@media (prefers-reduced-motion: no-preference)`: `main` rise 0.28s, sheet slide 0.25s. Nothing else animates.
 
 ### 6.2 Theme boot and toggle
-- `Head.astro` contains one inline script (hashed by the Astro CSP) that runs before CSS paints: add class `js` to `<html>`, read `ffg:theme` (JSON), and set `data-theme` if it is `"light"` or `"dark"`. Wrapped in try/catch. It never writes.
+- `Head.astro` contains one `is:inline` script (hashed through `scriptDirective.hashes`, SECURITY §2.1) that runs before CSS paints: add class `js` to `<html>`, read `ffg:theme` (JSON), and set `data-theme` if it is `"light"` or `"dark"`. Wrapped in try/catch. It never writes.
 - The toggle (`scripts/theme-toggle.ts`) writes through the `theme` store, sets `data-theme`, swaps the icon (`moon` in light, `sun` in dark) and sets the accessible name "Switch to dark theme" / "Switch to light theme".
 - `<meta name="theme-color">` twice, with `media` light `#EFEADF` and dark `#16151C`.
 

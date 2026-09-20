@@ -504,7 +504,7 @@ Criteria: two consecutive clean builds produce byte-identical `dist` (excluding 
 
 ### AC-OPS-03 — Node and scripts [B]
 Criteria:
-1. `engines.node` is `22.x`.
+1. `engines.node` is `>=22.22.3 <23`.
 2. `.nvmrc` is `22`.
 3. `npm run verify` runs, in order: typecheck, lint, format check, knip, unit tests, build (with verify-dist), ac-coverage and e2e.
 

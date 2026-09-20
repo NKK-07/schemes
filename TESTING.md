@@ -151,7 +151,7 @@ Runs after `astro build` and exits non-zero on the first failing check group, pr
 | `AC-FUNC-26` | Glossary anchors exist for every term link |
 | `AC-PERF-02`, `-03`, `-04` | JS budgets (§6), font files and preloads, HTML weight |
 | `AC-SEC-02`, `AC-SEC-05` | CSP meta present; the hash of every inline executable `<script>` (not `application/ld+json`) and every inline `<style>` listed; no `'unsafe-inline'`/`'unsafe-eval'` for scripts; no `on*=` attributes, no `style=` attributes, external links have `rel="noopener"`; when `PUBLIC_ANALYTICS=on`, the analytics script tag appears exactly once per page, and never when `off` |
-| `AC-OPS-03` | `engines.node` = `22.x`, `.nvmrc` = `22`, `verify` script order |
+| `AC-OPS-03` | `engines.node` = `>=22.22.3 <23`, `.nvmrc` = `22`, `verify` script order |
 
 `.html-validate.json`:
 
@@ -186,6 +186,7 @@ tests/
 │  ├─ similar.test.ts          AC-CONTENT-04 (lib/similar vs golden, 5 schemes)
 │  ├─ seo.test.ts              title/description rules of ARCHITECTURE §8.1 for edge cases (> 70 chars, abbr = name)
 │  ├─ stores.test.ts           AC-FUNC-18.3, AC-FUNC-20 (corrupt JSON, unknown ids, 4th compare)
+│  ├─ theme-boot.test.ts       AC-SEC-02 (the boot script's hash equals the configured hash)
 │  ├─ contrast.test.ts         AC-A11Y-05
 │  ├─ tokens.test.ts           AC-DES-01
 │  ├─ deps.test.ts             AC-SEC-06 parts 1, 2, 4 (exact pins, allowlist and phases = ARCHITECTURE §2, lockfile present); part 3 is `npm run audit`, which needs the network and is quoted in reports and run in CI

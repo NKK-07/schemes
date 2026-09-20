@@ -92,13 +92,13 @@ security: {
       "base-uri 'self'",
       "form-action 'self'"
     ],
-    scriptDirective: { resources: ["'self'", "'wasm-unsafe-eval'"] },
+    scriptDirective: { resources: ["'self'", "'wasm-unsafe-eval'"], hashes: ["sha256-<hash of the theme boot script>"] },
     styleDirective: { resources: ["'self'"] }
   }
 }
 ```
 
-- Astro adds a `sha256-…` hash for every inline script and style it emits (island hydration, the theme boot script in `Head.astro`). AC-SEC-02 checks that each inline block's hash is in the tag.
+- Astro adds a `sha256-…` hash for every inline script and style it processes (for example island hydration). It does **not** hash `is:inline` scripts. The one `is:inline` script, the theme boot script (DESIGN §6.2), is written once, literally, in `Head.astro`, and its SHA-256 is written literally in `scriptDirective.hashes`. The unit test `AC-SEC-02 theme boot script hash matches the config` reads the script text from `Head.astro` and checks its hash against `astro.config.mjs`; the AC-SEC-02 build check separately verifies every inline script on every page, wherever it sits in the document. A change to the script changes the hash in the same commit.
 - `'wasm-unsafe-eval'` exists only for Pagefind's WebAssembly. It is not `'unsafe-eval'`.
 - `img-src data:` exists only for the stamp texture mask in `site.css` (a `data:` SVG). No other `data:` URL may be added.
 - Vercel Web Analytics (D4 = On) loads `/_vercel/insights/script.js` and posts to `/_vercel/insights/*`, both same origin, so `'self'` covers them.

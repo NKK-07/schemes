@@ -100,7 +100,7 @@ Manual, Lighthouse and production criteria:
 
 **Tasks.**
 1. Confirm SPEC §3 has all four owner decisions filled in. If not: BLOCKED.
-2. Record the environment: OS, `node -v` (≥ 22.12, < 23), `npm -v`, `git --version`, whether Playwright can install Chromium and WebKit.
+2. Record the environment: OS, `node -v` (≥ 22.22.3, < 23), `npm -v`, `git --version`, whether Playwright can install Chromium and WebKit.
 3. For every package in ARCHITECTURE §2: `npm view <name>@<version> version engines peerDependencies`. Record any peer range that the set does not satisfy.
 4. On a throwaway branch `spike/phase-00` (never merged), build the smallest project that exercises each assumption in ARCHITECTURE §11 and record VERIFIED or FAILED with output:
    - A1: a page with a `client:idle` Preact island and the theme boot inline script; build; show the CSP meta tag; open in Chromium through Playwright with a `securitypolicyviolation` listener and show zero violations.
@@ -145,9 +145,9 @@ Finish with docs/reports/phase-00.md from templates/phase-report.md and reply wi
 **Inputs.** ARCHITECTURE §2–§4, §6.2, §7, §9–§11; SECURITY §2, §5, §6; TESTING §2–§5; the Phase 0 report.
 
 **Tasks.**
-1. `package.json`: `"type": "module"`, `"private": true`, `engines.node: "22.x"`, the packages ARCHITECTURE §2 lists for Phase 1 at their exact versions (no ranges), the scripts of TESTING §2. Generate `package-lock.json` with `npm install` once, then use `npm ci`. Quote `npm run audit`.
+1. `package.json`: `"type": "module"`, `"private": true`, `engines.node: ">=22.22.3 <23"`, the packages ARCHITECTURE §2 lists for Phase 1 at their exact versions (no ranges), the scripts of TESTING §2. Generate `package-lock.json` with `npm install` once, then use `npm ci`. Quote `npm run audit`.
 2. Config files exactly as specified: `tsconfig.json` (strictest), `eslint.config.js` (TESTING §3.3), `.prettierrc`, `knip.json`, `vitest.config.ts`, `playwright.config.ts` (projects in TESTING §3.1), `lighthouserc.json` (TESTING §3.2), `.prettierignore` and ESLint ignores (TESTING §3.4), `vercel.json` (JSON-equal to SECURITY §2), `.nvmrc`, `.npmrc` (only if A8 VERIFIED), `.gitignore`.
-3. `astro.config.mjs` with only the core settings (static output, `site` from the SPEC §5 rule, `trailingSlash: "always"`, `build.format: "directory"`, `build.inlineStylesheets: "never"`) and `security.csp` from SECURITY §2.1. Integrations are added in their packages' phases (ARCHITECTURE §2).
+3. `astro.config.mjs` with only the core settings (static output, `site` from the SPEC §5 rule, `trailingSlash: "always"`, `build.format: "directory"`, `build.inlineStylesheets: "never"`, `markdown: { syntaxHighlight: false }`) and `security.csp` from SECURITY §2.1. Integrations are added in their packages' phases (ARCHITECTURE §2).
 4. `scripts/serve-dist.ts` (applies `vercel.json` headers, `trailingSlash` 308s and `cleanUrls`; serves `404.html` with status 404; prints `listening`), `scripts/verify-dist.ts` (check registry and fail-closed runner; checks are added in the phase that owns them), `scripts/ac-coverage.ts` (TESTING §2, PHASES §3).
 5. `tests/helpers/predicate.ts` and `tests/helpers/order.ts`, written from SPEC §7.1 and §7.2 only, importing nothing from `src/`.
 6. `tests/e2e/fixtures.ts` with the automatic guards of TESTING §5.1.
@@ -405,7 +405,7 @@ Finish by running `npm run verify` and quoting its exit code, writing docs/repor
 **Tasks.**
 1. `lib/jsonld.ts` with `schema-dts` types and `JsonLd.astro` (the only `set:html`), per template (ARCHITECTURE §8.2); breadcrumb JSON-LD matching the visible trail.
 2. Open Graph and Twitter tags in `Head.astro`, on indexable pages only (non-indexable pages get no `og:*` or `twitter:*` tags); `og:title` rules (ARCHITECTURE §8.1).
-3. `src/pages/og/[...route].ts` with `astro-og-canvas` (DESIGN §5): one image per scheme, per region, and the default.
+3. `src/pages/og/[...route].ts` with `astro-og-canvas` (DESIGN §5, including the exact font family names and the 100-character title limit): one image per scheme, per region, and the default. Add `src/assets/og-wordmark.png`, copied byte for byte from `docs/proposals/assets/0004-og-wordmark.png`.
 4. Add `@astrojs/sitemap` to `astro.config.mjs` (filter and `lastmod`); `src/pages/robots.txt.ts` from D2; the `GOOGLE_SITE_VERIFICATION` meta when set.
 5. Build checks AC-SEO-06..10.
 
